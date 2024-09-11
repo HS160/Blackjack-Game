@@ -9,7 +9,7 @@ def sum(list):
     return sum_fun
         
     
-Cards = [1,2,3,4,5,6,7,8,9,10,10,10]
+Cards = [11,2,3,4,5,6,7,8,9,10,10,10]
 
 start_game = True
 

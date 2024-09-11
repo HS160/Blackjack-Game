@@ -19,7 +19,7 @@ while start_game:
     if choice_1 == 'n':
         print("Thank You for coming!")
         break
-    else:
+    elif choice_1 == 'y':
         restart = True
         
         while restart:
@@ -50,12 +50,15 @@ while start_game:
                 print(f"Your cards = {card_player}")
                 print(f"Comp cards = {card_comp}")
                 
-            else:
+            elif choice_2 == 'n':
                 comp_2 = random.choice(Cards)
                 card_comp.append(comp_2)
                 
                 print(f"Your cards = {card_player}")
                 print(f"Comp cards = {card_comp}")
+            else:
+                print("Error")
+                break
                 
             comp_sum = sum(card_comp)
             player_sum = sum(card_player)
@@ -70,6 +73,22 @@ while start_game:
             
             elif player_sum == comp_sum <= 21:
                 print("Draw!") 
+            
+            
+            choice_3 = input("You want to restart?\nY = Yes\nN = No\n").lower()
+            if choice_3 == 'n':
+                print("Thank You for playing")
+                break
+            elif choice_3 == 'y':
+                for i in range(1,100):
+                    print("\n")
+            else:
+                print("ERROR")
+                break
+        break
+    else:
+        print("Error")
+        break
             
             
             choice_3 = input("You want to restart?\nY = Yes\nN = No\n").lower()
